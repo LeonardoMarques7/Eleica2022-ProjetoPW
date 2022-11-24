@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eleições para presidente 2022 - 2º Turno </title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.es.gov.br/fonts/lato/1.0.0/css/lato.min.css">
+    <link rel="stylesheet" href="https://cdn.es.gov.br/fonts/raleway/1.0.0/css/raleway.min.css">
+
+</head>
+<style>
+    
+    * {
+      font-family:'Raleway-thin', sans-serif;
+      font-weight: 700;
+      color: black;
+    }
+
+    .logo-nav {
+        height: 50px;
+    }
+    .navbar {
+        font-size: 16px;
+        color: black;
+    }
+    .nav-link {
+      color: green;
+    }
+    .nav-link::hover {
+      color: green;
+    }
+    .nav-link::after {
+      color: green;
+    }
+    .nav-link:active {
+      color: green;
+    }
+
+    .dropdown-item:hover {
+      background-color: rgba(0, 128, 0, 0.322);
+    }
+
+    .img-titulo {
+      width: 100%;
+      height: 100%;
+    }
+
+    .img-votando {
+      border-radius: 10px;
+      border: 2px solid rgba(0, 128, 0, 0.26);
+    }
+
+    .faixa {
+      display: flex;
+      flex-direction: row;
+    }
+
+    section {
+      width: 100%;
+      height: 100%;
+    }
+
+    .texto {
+      padding: 12px;
+      margin: 2px;
+    }
+
+    p {
+      margin-top: 10px;
+    }
+
+    .tela-inicial {
+      background: rgb(19,0,168);
+      background: linear-gradient(90deg, rgba(19,0,168,1) 0%, rgba(0,99,255,0.6138830532212884) 100%);
+    }
+</style>
+<body>
+    <nav class="navbar navbar-expand-lg bg-transparent">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><img src="./imagens/logo_navbar.png" alt="" class="logo-nav"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="#inicial">Como funciona a Eleição do Brasil</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Candidatos
+                </a>
+              <li class="nav-item">
+                <a class="nav-link" href="#titulo">Baixe o E-Título</a>
+              </li>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#Ciro">Ciro</a></li>
+                  <li><a class="dropdown-item" href="#Lula">Lula</a></li>
+                  <li><a class="dropdown-item" href="#Padre">Padre</a></li>
+                  <li><a class="dropdown-item" href="#Simone">Simone</a></li>
+                  <li><a class="dropdown-item" href="#Bolsonaro">Bolsonaro</a></li>
+                  <li><a class="dropdown-item" href="#Léo">Léo</a></li>
+                </ul>
+              </li>
+              
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    <script>
+        ciro = 0 // Votos
+        lu = 0
+        padre = 0
+        si = 0
+        bo = 0
+        leo = 0
+        branco = 0
+        nulos = 0
+        nvotos = 0
+        voto = 0
+
+        nvotos = prompt("Número de pessoas na sessão:")
+        for(i=1;i<=nvotos;i++)
+        {
+            voto = prompt(" 12 - Ciro Gomes \n 13 - Lula da Silva \n 14 - Padre Kelmon \n 15 - Simone Tebet \n 22 - Jair Bolsonaro \n 80 - Léo Péricles")
+                if(voto == 12) ciro++ 
+                else
+                    if(voto == 13) lu++ 
+                    else
+                        if(voto == 14) padre++ 
+                        else
+                            if(voto == 15) si++ 
+                            else
+                                if(voto == 22) bo++ 
+                                else
+                                    if(voto == 80) leo++ 
+                                    else
+                                        if(voto == "") branco++
+                                        else
+                                            nulos++
+        }
+
+      if (nvotos > 01) {
+      alert("Ciro Gomes = " +ciro)
+      alert("Lula da Silva = " +lu)
+      alert("Padre Kelmon = " +padre)
+      alert("Simone Tebet = " +si)
+      alert("Jair Bolsonaro = " +bo)
+      alert("Leo Péricles = " +leo) 
+      alert("Votos Brancos = " +branco)
+      alert("Votos Nulos = " +nulos)
+      }
+
+    if(bo > lu && bo > si && bo > ciro && bo > leo && bo > padre)
+    {
+        document.write("Bolsonaro venceu a eleção com " +bo+ " votos.")
+        document.write('<img src="imagens/bolsonaro.jpg">')
+    } else
+    if(lu > bo && lu > si && lu > ciro && lu > leo && lu > padre)
+    {
+        document.write("Lula venceu a eleção com " +lu+ " votos.")
+        document.write('<img src="imagens/lula.jpg">')
+    }
+    if(si > bo && si > si && lu > ciro && si > leo && si > padre)
+    {
+        document.write("Simone venceu a eleção com " +si+ " votos.")
+        document.write('<img src="imagens/simone.jpg">')
+    }
+    if(ciro > bo && ciro > si && ciro > ciro && ciro > leo && ciro > padre)
+    {
+        document.write("Ciro venceu a eleção com " +ciro+ " votos.")
+        document.write('<img src="imagens/ciro.jpg">')
+    }
+    if(leo > bo && leo > si && leo > ciro && leo > lu && leo > padre)
+    {
+        document.write("Léo Péricles venceu a eleção com " +leo+ " votos.")
+        document.write('<img src="imagens/leo.jpg">')
+    }
+    if(padre > bo && padre > si && padre > ciro && padre > leo && padre > lu)
+    {
+        document.write("Padre Kelmon venceu a eleção com " +padre+ " votos.")
+        document.write('<img src="imagens/padre.jpg">')
+    }
+
+    </script>
+    <section class="tela-inicial" id="inicial">
+      <div class="faixa">
+        <div class="texto">
+          <h1>Como funciona a Eleição no Brasil?</h1>
+          <p>"Você sabe como funciona o sistema eleitoral brasileiro? O sistema eleitoral brasileiro é a forma como funciona a escolha dos representantes governamentais do Brasil. Esse sistema eleitoral foi estabelecido pela Constituição de 1988 e é gerido pelo Tribunal Superior Eleitoral. A cada dois anos, são realizadas eleições no Brasil, e os candidatos são eleitos por meio do voto popular."</p>
+        </div>
+        <img src="./imagens/votando.jpeg" alt="pessoa votando" class="img-votando">
+      </div>
+    </section>
+
+    <section id="titulo">
+      <img src="./imagens/etitulo.png" alt="etitulo" class="img-titulo">
+    </section>
+
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
