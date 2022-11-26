@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eleições para presidente 2022 - 2º Turno </title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.es.gov.br/fonts/lato/1.0.0/css/lato.min.css">
+    <link rel="stylesheet" href="https://cdn.es.gov.br/fonts/raleway/1.0.0/css/raleway.min.css">
+
+</head>
+<style>
+    
+    * {
+      font-family:'Raleway-thin', sans-serif;
+      font-weight: 700;
+      color: black;
+    }
+
+    .logo-nav {
+        height: 50px;
+    }
+    .navbar {
+        font-size: 16px;
+        color: black;
+    }
+    .nav-link {
+      color: green;
+    }
+    .nav-link::hover {
+      color: green;
+    }
+    .nav-link::after {
+      color: green;
+    }
+    .nav-link:active {
+      color: green;
+    }
+    .dropdown-item:hover {
+      background-color: rgba(0, 128, 0, 0.322);
+    }
+
+    .img-titulo {
+      width: 100%;
+      height: 100%;
+    }
+    .img-votando {
+      border-radius: 10px;
+      border: 2px solid rgba(0, 128, 0, 0.26);
+    }
+    .faixa {
+      display: flex;
+      flex-direction: row;
+    }
+    section {
+      width: 100%;
+      height: 100%;
+    }
+    .texto {
+      padding: 12px;
+      margin: 2px;
+    }
+    p {
+      margin-top: 10px;
+    }
+
+    nav {
+      background-color: transparent;
+    }
+    .navbar {
+      background-color: transparent;
+    }
+
+    .tela-inicial {
+      background: rgb(19,0,168);
+      background: linear-gradient(90deg, rgba(19,0,168,1) 0%, rgba(0,99,255,0.6138830532212884) 100%);
+    }
+
+    .modal-body {
+      text-align: center;
+      align-items: center;
+    }
+
+    .carroseul {
+      width: 1119px;
+      height: 494px;
+    }
+
+    .img-caro {
+      width: 1119px;
+      height: 494px;
+      border-radius: 5px;
+      border: 1px solid green;
+    }
+
+    .carousel-caption > p, h5{
+      color: white;
+    }
+
+    .central {
+      margin-left: 10vw;
+    }
+
+    .div-card-img {
+        text-align: center;
+        align-items: center;
+    }
+</style>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-transparent">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="./index.html"><img src="./imagens/logo_navbar.png" alt="" class="logo-nav"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="./candidatos.html">Candidatos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://play.google.com/store/apps/details?id=br.jus.tse.eleitoral.etitulo&hl=pt_BR&gl=US">E-Título</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./votar.html">Votar</a>
+              </li>
+              <li class="nav-item">
+                <button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#mymodal">
+                  Resultado
+                </button>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    <script>
+      ciro = 0 // Votos
+      lu = 0
+      padre = 0
+      si = 0
+      bo = 0
+      leo = 0
+      branco = 0
+      nulos = 0
+      nvotos = 0
+      voto = 0
+
+      nvotos = prompt("Número de pessoas na sessão:")
+      for(i=1;i<=nvotos;i++)
+      {
+          voto = prompt(" 12 - Ciro Gomes \n 13 - Lula da Silva \n 14 - Padre Kelmon \n 15 - Simone Tebet \n 22 - Jair Bolsonaro \n 80 - Léo Péricles")
+              if(voto == 12) ciro++ 
+              else
+                  if(voto == 13) lu++ 
+                  else
+                      if(voto == 14) padre++ 
+                      else
+                          if(voto == 15) si++ 
+                          else
+                              if(voto == 22) bo++ 
+                              else
+                                  if(voto == 80) leo++ 
+                                  else
+                                      if(voto == "") branco++
+                                      else
+                                          nulos++
+      }
+
+      if (nvotos > 01) {
+      alert("Ciro Gomes = " + ciro)
+      alert("Lula da Silva = " + lu)
+      alert("Padre Kelmon = " + padre)
+      alert("Simone Tebet = " + si)
+      alert("Jair Bolsonaro = " + bo)
+      alert("Leo Péricles = " + leo) 
+      alert("Votos Brancos = " + branco)
+      alert("Votos Nulos = " + nulos)
+      }
+
+    </script>
+
+  <div class="modal fade" id="mymodal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">Vencedor da Eleição2022</h1>
+        </div>
+        <div class="modal-body">
+          <p> 
+            <script>
+              if(bo > lu && bo > si && bo > ciro && bo > leo && bo > padre)
+              {
+                document.write("Bolsonaro venceu a eleição com " + bo + " votos.")
+              } else
+              if(lu > bo && lu > si && lu > ciro && lu > leo && lu > padre)
+              {
+                document.write("Lula venceu a eleição com " + lu + " votos.")
+              } else
+              if(si > bo && si > lu && si > padre && si > ciro && si > leo)
+              {
+                document.write("Simone venceu a eleição com " + si + " votos.")
+              } else
+              if(ciro > bo && ciro > si && ciro > leo && ciro > padre)
+              {
+                document.write("Ciro venceu a eleição com " + ciro + " votos.")
+              } else
+              if(leo > bo && leo > si && leo > ciro && leo > lu && leo > padre)
+              {
+                document.write("Léo Péricles venceu a eleição com " + leo + " votos.")
+              } else
+              if(padre > bo && padre > si && padre > ciro && padre > leo && padre > lu)
+              {
+                document.write("Padre Kelmon venceu a eleição com " + padre + " votos.")
+              }
+            
+              // Empate
+
+              if(bo == lu || bo == si || bo == ciro || bo == leo || bo == padre)
+              {
+                document.write("A eleição empatou!!")
+              }else 
+              if(lu == bo || lu == si || lu == ciro || lu == leo || lu == padre)
+              {
+                document.write("A eleição empatou!!")
+              }else
+              if(si == bo || si == ciro || si == leo || si == padre || si == lu)
+              {
+                document.write("A eleição empatou!!")
+              }else
+              if(ciro == bo || ciro == si || ciro == leo || ciro == padre || ciro == lu)
+              {
+                document.write("A eleição empatou!!")
+              }else
+              if(leo == bo || leo == si || leo == ciro || leo == lu || leo == padre)
+              {
+                document.write("A eleição empatou!!")
+              }else
+              if(padre == bo || padre == si || padre == ciro || padre == leo || padre == lu)
+              {
+                document.write("A eleição empatou!!")
+              }else 
+            </script>
+            </p>
+            <div class="div-card-img">
+                <script>
+                if (ciro > bo && ciro > si && ciro > leo && ciro > padre) {document.write('<img src="imagens/ciro-card.png" width="200"')}
+                    else if (lu > bo && lu > si && lu > ciro && lu > leo && lu > padre) {document.write('<img src="imagens/lula.png" width="200"')}
+                        else if (padre > bo && padre > si && padre > ciro && padre > leo && padre > lu) {document.write('<img src="imagens/padre-card.png" width="200"')}
+                            else if (si > bo && si > ciro && si > leo && si > padre && si >lu) {document.write('<img src="imagens/simone-card.png" width="200"')}
+                                else if (bo > lu && bo > si && bo > ciro && bo > leo && bo > padre) {document.write('<img src="imagens/bolsonaro-card.png" width="200"')}
+                                    else if (leo > bo && leo > si && leo > ciro && leo > lu && leo > padre) {document.write('<img src="imagens/leo-card.png" width="200"')}
+                </script>
+            
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-success" data-bs-dismiss="modal">Fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
