@@ -1,0 +1,31 @@
+.img-candi-modal {
+  border-radius: 5px;
+  border: 1px solid green;
+}
+
+.modal-content{
+    border: 1px solid;
+    border-radius: 8px;
+    border-color: rgba(6,122,0,0.31);
+    -webkit-box-shadow: 4px 4px 9px 0px rgba(6,122,0,0.31);
+    -moz-box-shadow: 4px 4px 9px 0px rgba(6,122,0,0.31);
+    box-shadow: 4px 4px 9px 0px rgba(6,122,0,0.31);
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+}
+
+.nav-link {
+    color: green;
+}
+.nav-link::hover {
+    color: green;
+}
+.nav-link::after {
+    color: green;
+}
+.nav-link:active {
+    color: green;
+}

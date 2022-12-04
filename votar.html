@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eleições para presidente 2022 - 2º Turno </title>
+    <title>Eleições para presidente 2022 - 1º Turno </title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.es.gov.br/fonts/lato/1.0.0/css/lato.min.css">
-    <link rel="stylesheet" href="https://cdn.es.gov.br/fonts/raleway/1.0.0/css/raleway.min.css">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="imagens/tse.ico" type="image/x-icon">
 </head>
 <style>
-    
     * {
-      font-family:'Raleway-thin', sans-serif;
-      font-weight: 700;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 300;
       color: black;
     }
 
@@ -81,7 +81,7 @@
       align-items: center;
     }
 
-    .carroseul {
+    .carrossel {
       width: 1119px;
       height: 494px;
     }
@@ -101,42 +101,48 @@
       margin-left: 10vw;
     }
 
-    .div-card-img {
-        text-align: center;
-        align-items: center;
+    h5 {
+      color: black;
     }
 </style>
   <body>
     <nav class="navbar navbar-expand-lg bg-transparent">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="./index.html"><img src="./imagens/logo_navbar.png" alt="" class="logo-nav"></a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link" href="./candidatos.html">Candidatos</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="https://play.google.com/store/apps/details?id=br.jus.tse.eleitoral.etitulo&hl=pt_BR&gl=US">E-Título</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="./votar.html">Votar</a>
-              </li>
-              <li class="nav-item">
-                <button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#mymodal">
-                  Resultado
-                </button>
-              </li>
-            </ul>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
-          </div>
+      <div class="container-fluid">
+        <a class="navbar-brand" href="./index.html"><img src="./imagens/logo_navbar.png" alt="" class="logo-nav"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="./candidatos.html">Candidatos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://play.google.com/store/apps/details?id=br.jus.tse.eleitoral.etitulo&hl=pt_BR&gl=US">E-Título</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./votar.html">Votar</a>
+            </li>
+            <li class="nav-item">
+              <button type="text" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#mymodal2">
+                Votos
+              </button>
+            </li>
+            <li class="nav-item" style="margin-left: 5px;">
+              <button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#mymodal">
+                Resultado
+              </button>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
         </div>
-      </nav>
+      </div>
+    </nav>
+
+    <!-- Script -->
     <script>
       ciro = 0 // Votos
       lu = 0
@@ -170,94 +176,117 @@
                                           nulos++
       }
 
-      if (nvotos > 01) {
-      alert("Ciro Gomes = " + ciro)
-      alert("Lula da Silva = " + lu)
-      alert("Padre Kelmon = " + padre)
-      alert("Simone Tebet = " + si)
-      alert("Jair Bolsonaro = " + bo)
-      alert("Leo Péricles = " + leo) 
-      alert("Votos Brancos = " + branco)
-      alert("Votos Nulos = " + nulos)
-      }
-
     </script>
 
   <div class="modal fade" id="mymodal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h1 class="modal-title fs-5" id="staticBackdropLabel">Vencedor da Eleição2022</h1>
+          <h5 style="margin-top: 6px;" style="font-weight: 300;">O vencedor da Eleição2022 foi: </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
           <p> 
             <script>
-              if(bo > lu && bo > si && bo > ciro && bo > leo && bo > padre)
-              {
-                document.write("Bolsonaro venceu a eleição com " + bo + " votos.")
-              } else
-              if(lu > bo && lu > si && lu > ciro && lu > leo && lu > padre)
-              {
-                document.write("Lula venceu a eleição com " + lu + " votos.")
-              } else
-              if(si > bo && si > lu && si > padre && si > ciro && si > leo)
-              {
-                document.write("Simone venceu a eleição com " + si + " votos.")
-              } else
-              if(ciro > bo && ciro > si && ciro > leo && ciro > padre)
-              {
-                document.write("Ciro venceu a eleição com " + ciro + " votos.")
-              } else
-              if(leo > bo && leo > si && leo > ciro && leo > lu && leo > padre)
-              {
-                document.write("Léo Péricles venceu a eleição com " + leo + " votos.")
-              } else
-              if(padre > bo && padre > si && padre > ciro && padre > leo && padre > lu)
-              {
-                document.write("Padre Kelmon venceu a eleição com " + padre + " votos.")
-              }
-            
+              document.write('<link href="css/bootstrap.min.css" rel="stylesheet">');
+              document.write('<link rel="stylesheet" href="css/style.css">');
               // Empate
 
               if(bo == lu || bo == si || bo == ciro || bo == leo || bo == padre)
               {
-                document.write("A eleição empatou!!")
+                document.write("A eleição empatou!!");
               }else 
               if(lu == bo || lu == si || lu == ciro || lu == leo || lu == padre)
               {
-                document.write("A eleição empatou!!")
+                document.write("A eleição empatou!!");
               }else
               if(si == bo || si == ciro || si == leo || si == padre || si == lu)
               {
-                document.write("A eleição empatou!!")
+                document.write("A eleição empatou!!");
               }else
               if(ciro == bo || ciro == si || ciro == leo || ciro == padre || ciro == lu)
               {
-                document.write("A eleição empatou!!")
+                document.write("A eleição empatou!!");
               }else
               if(leo == bo || leo == si || leo == ciro || leo == lu || leo == padre)
               {
-                document.write("A eleição empatou!!")
+                document.write("A eleição empatou!!");
               }else
               if(padre == bo || padre == si || padre == ciro || padre == leo || padre == lu)
               {
-                document.write("A eleição empatou!!")
+                document.write("A eleição empatou!!");
               }else 
             </script>
             </p>
-            <div class="div-card-img">
                 <script>
-                if (ciro > bo && ciro > si && ciro > leo && ciro > padre) {document.write('<img src="imagens/ciro-card.png" width="200"')}
-                    else if (lu > bo && lu > si && lu > ciro && lu > leo && lu > padre) {document.write('<img src="imagens/lula.png" width="200"')}
-                        else if (padre > bo && padre > si && padre > ciro && padre > leo && padre > lu) {document.write('<img src="imagens/padre-card.png" width="200"')}
-                            else if (si > bo && si > ciro && si > leo && si > padre && si >lu) {document.write('<img src="imagens/simone-card.png" width="200"')}
-                                else if (bo > lu && bo > si && bo > ciro && bo > leo && bo > padre) {document.write('<img src="imagens/bolsonaro-card.png" width="200"')}
-                                    else if (leo > bo && leo > si && leo > ciro && leo > lu && leo > padre) {document.write('<img src="imagens/leo-card.png" width="200"')}
+                document.write('<link href="css/bootstrap.min.css" rel="stylesheet">');
+                document.write('<link rel="stylesheet" href="css/style.css">');
+                document.write('<center>');
+                if (ciro > bo && ciro > si && ciro > leo && ciro > padre) 
+                {
+                  document.write('<h5 class="modal-title">Ciro Gomesvenceu a eleição!</h5>');
+                  document.write('<br>');
+                  document.write('<img src="imagens/ciro-candi.png" class="img-candi-modal" >');
+                }
+                else if (lu > bo && lu > si && lu > ciro && lu > leo && lu > padre) 
+                {
+                  document.write('<h5 class="modal-title">Lula da Silva venceu a eleição!</h5>');
+                  document.write('<br>');
+                  document.write('<img src="imagens/lula-candi.png" class="img-candi-modal" >');
+                }
+                else if (padre > bo && padre > si && padre > ciro && padre > leo && padre > lu) 
+                {
+                  document.write('<h5 class="modal-title">Padre Kelmon venceu a eleição!</h5>');
+                  document.write('<br>');
+                  document.write('<img src="imagens/padre-candi.png" class="img-candi-modal" >');
+                }
+                else if (si > bo && si > ciro && si > leo && si > padre && si >lu)
+                {
+                  document.write('<h5 class="modal-title">Simone Tebet venceu a eleição!</h5>');
+                  document.write('<br>');
+                  document.write('<img src="imagens/simone-candi.png" class="img-candi-modal" >');
+                }
+                else if (bo > lu && bo > si && bo > ciro && bo > leo && bo > padre) 
+                {
+                  document.write('<h5 class="modal-title">Jair Bolsonaro venceu a eleição!</h5>');
+                  document.write('<br>');
+                  document.write('<img src="imagens/bolso-candi.png" class="img-candi-modal" >');
+                }
+                else if (leo > bo && leo > si && leo > ciro && leo > lu && leo > padre) 
+                {
+                  document.write('<h5 class="modal-title">Léo Périclesvenceu a eleição!</h5>');
+                  document.write('<br>');
+                  document.write('<img src="imagens/leo-candi.png class="img-candi-modal">');
+                }
+                document.write('</center> <br> <br>');
                 </script>
-            
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- Modal Votos -->
+    <div class="modal" id="mymodal2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Quantidade de votos <span class="badge bg-danger">Ao Vivo</span></h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-outline-success" data-bs-dismiss="modal">Fechar</button>
+          <div class="modal-body">
+              <script>
+                document.write('<link href="css/bootstrap.min.css" rel="stylesheet">');
+                document.write('<link rel="stylesheet" href="css/style.css">');
+                document.write('<h5>Foram  ' + ciro + ' Votos no Ciro.</h5>');
+                document.write('<h5>Foram  ' + lu + ' Votos no Lula.</h5>');
+                document.write('<h5>Foram  ' + padre + ' Votos no Padre.</h5>');
+                document.write('<h5>Foram  ' + si + ' Votos no Simone.</h5>');
+                document.write('<h5>Foram  ' + bo + ' Votos no Bolsonaro.</h5>');
+                document.write('<h5>Foram  ' + leo + ' Votos no Léo.</h5>');
+                document.write('<h5>Foram  ' + nulos + ' Votos Nulos.</h5>');
+                document.write('<h5>Foram  ' + branco + ' Votos em Branco.</h5>');
+              </script>
           </div>
         </div>
       </div>
