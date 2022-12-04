@@ -90,8 +90,6 @@
     .img-caro {
       width: 1119px;
       height: 494px;
-      border-radius: 5px;
-      border: 1px solid green;
     }
 
     .carousel-caption > p, h5{
@@ -101,6 +99,15 @@
     .central {
       margin-left: 10vw;
     }
+
+    .carousel-inner {
+      border-radius: 10px;
+      border: 1px solid;
+      border-color: rgba(25,71,0,0.68);
+      -webkit-box-shadow: 11px 11px 10px -1px rgba(25,71,0,0.68);
+      -moz-box-shadow: 11px 11px 10px -1px rgba(25,71,0,0.68);
+      box-shadow: 11px 11px 10px -1px rgba(25,71,0,0.68);
+    }
 </style>
   <body>
 
@@ -108,10 +115,10 @@
     <nav class="navbar navbar-expand-lg bg-transparent">
       <div class="container-fluid">
         <a class="navbar-brand" href="#"><img src="./imagens/logo_navbar.png" alt="" class="logo-nav"></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler navbar-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
               <a class="nav-link" href="./candidatos.html">Candidatos</a>
@@ -137,9 +144,9 @@
     </nav>
 
     <!-- Carrossel -->
-    <section class="central">
+    <section class="central" style="margin-top: 20px;">
       <div id="carouselExampleCaptions" class="carousel slide carrossel" data-bs-ride="false">
-        <div class="carousel-indicators">
+        <div class="carousel-indicators" >
           <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
           <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
           <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
